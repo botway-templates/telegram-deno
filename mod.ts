@@ -4,6 +4,8 @@ import { getToken } from "https://deno.land/x/denobot/mod.ts";
 // Create bot object
 const bot = new Bot(getToken());
 
+console.log("Starting Bot, this might take a while...");
+
 // Listen for messages
 bot.command("start", (ctx) => ctx.reply("Welcome! Send me a photo!"));
 bot.on("message:text", (ctx) => ctx.reply("That is text and not a photo!"));
