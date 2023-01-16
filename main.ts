@@ -1,5 +1,5 @@
-import { Bot } from "grammy/mod.ts";
-import { getToken } from "denobot/mod.ts";
+import { Bot } from "grammy";
+import { getToken } from "denobot";
 
 // Create bot object
 const bot = new Bot(getToken());
