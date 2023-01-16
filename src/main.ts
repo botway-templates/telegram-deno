@@ -1,10 +1,13 @@
 import { Bot } from "grammy";
 import { getToken } from "denobot";
+import { logger } from "./logger.ts";
+
+const log = logger({ name: "Event: Ready" });
 
 // Create bot object
 const bot = new Bot(getToken());
 
-console.log("Starting Bot, this might take a while...");
+log.info("Starting Bot, this might take a while...");
 
 // Listen for messages
 bot.command("start", (ctx) => ctx.reply("Welcome! Send me a photo!"));
@@ -19,4 +22,4 @@ bot.on("edited_message", (ctx) =>
 // Launch!
 bot.start();
 
-console.log("Connected");
+log.info("Bot Ready");
