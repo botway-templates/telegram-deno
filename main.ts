@@ -1,5 +1,5 @@
-import { Bot } from "https://deno.land/x/grammy/mod.ts";
-import { getToken } from "https://deno.land/x/denobot/mod.ts";
+import { Bot } from "grammy/mod.ts";
+import { getToken } from "denobot/mod.ts";
 
 // Create bot object
 const bot = new Bot(getToken());
@@ -18,3 +18,5 @@ bot.on("edited_message", (ctx) =>
 
 // Launch!
 bot.start();
+
+console.log("Connected");
